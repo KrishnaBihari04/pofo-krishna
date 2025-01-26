@@ -190,100 +190,6 @@ header {
   border-bottom: 1px solid white;
 }
 
- .home-grid {
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: auto auto auto;
-        gap: 20px;
-        max-width: 1200px;
-        margin: 0 auto;
-        padding: 20px;
-        color: white;
-    }
-
-    .intro-text {
-        grid-column: 1 / 3;
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        padding: 20px;
-        text-align: center;
-        font-size: 1.5rem;
-    }
-
-    .dynamic-text {
-        color: #21ad1a;
-        display: inline-block;
-    }
-
-    .profile-pic {
-        grid-row: 2;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    }
-
-    .profile-pic img {
-        width: 250px;
-        height: 250px;
-        border-radius: 50%;
-        object-fit: cover;
-    }
-
-    .about-section {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        padding: 20px;
-    }
-
-     .projects-preview {
-        grid-column: 1 / 3;
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        gap: 20px;
-    }
-
-    @media screen and (max-width: 768px) {
-        .projects-preview {
-            grid-template-columns: repeat(2, 1fr);
-        }
-    }
-
-    @media screen and (max-width: 480px) {
-        .projects-preview {
-            grid-template-columns: 1fr;
-        }
-    }
-
-    .project-card {
-        background-color: rgba(255, 255, 255, 0.1);
-        border-radius: 10px;
-        overflow: hidden;
-    }
-
-    .project-card img {
-        width: 100%;
-        height: 200px;
-        object-fit: cover;
-    }
-
-    footer {
-        grid-column: 1 / 3;
-        display: flex;
-        justify-content: space-between;
-        padding: 20px;
-        background-color: rgba(255, 255, 255, 0.1);
-    }
-
-    @media screen and (max-width: 768px) {
-        .home-grid {
-            grid-template-columns: 1fr;
-        }
-
-        .intro-text, .projects-preview, footer {
-            grid-column: 1;
-        }
-    }
-
 .contact-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -467,6 +373,134 @@ header {
   margin-top: 20px;
   text-decoration: none;
   display: inline-block;
+}
+
+.cv-download-btn:hover {
+  background-color: #45a049;
+}
+
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  color: white;
+}
+
+.intro-text {
+  grid-column: 1 / 3;
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.dynamic-text {
+  color: #4CAF50;
+  display: inline-block;
+}
+
+.profile-pic, .about-section, .two-row-box {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+.profile-pic img {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.projects-preview {
+  grid-column: 1 / 3;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.project-card {
+  background-color: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.project-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+footer {
+  grid-column: 1 / 3;
+  display: flex;
+  justify-content: space-between;
+  padding: 20px;
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+@media screen and (max-width: 1024px) {
+  .home-grid {
+      grid-template-columns: 1fr;
+  }
+
+  .intro-text, .projects-preview, footer {
+      grid-column: 1;
+  }
+
+  .projects-preview {
+      grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .projects-preview {
+      grid-template-columns: 1fr;
+  }
+
+  .home-grid {
+      padding: 10px;
+      gap: 10px;
+  }
+
+  .intro-text {
+      font-size: 1.2rem;
+  }
+
+  .profile-pic img {
+      width: 150px;
+      height: 150px;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .intro-text {
+      font-size: 1rem;
+  }
+
+  footer {
+      flex-direction: column;
+      text-align: center;
+  }
+}
+
+.cv-download-btn {
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
 .cv-download-btn:hover {
