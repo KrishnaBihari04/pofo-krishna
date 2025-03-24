@@ -1,7 +1,7 @@
 //dynamic-text
 document.addEventListener("DOMContentLoaded", () => {
   const dynamicText = document.querySelector(".dynamic-text");
-  const texts = ["Software Developer", "Graphic Designer", "Picture Editor"];
+  const texts = ["Software Developer", "Graphic Designer",];
   let index = 0;
 
   setInterval(() => {
